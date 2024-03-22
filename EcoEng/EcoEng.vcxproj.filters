@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{887fd4fd-9192-4a11-978c-77cae75fc5dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\Main">
+      <UniqueIdentifier>{a563fba0-0cf0-48e9-93a3-4fa9d2ce4f11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine">
+      <UniqueIdentifier>{9a1ee337-4345-4d1d-92a0-66408783f13d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{c8029b07-f52d-422a-a840-3fb5fecfe252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\imgui">
+      <UniqueIdentifier>{b0e31132-bc0c-41c0-884d-b3400f09200f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\window">
+      <UniqueIdentifier>{8aa499ff-7ece-463e-a26b-69730827d301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\core">
+      <UniqueIdentifier>{0517f690-c4ba-4f10-95c7-2c95d96d6ce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\tools">
+      <UniqueIdentifier>{8d19df66-36b5-45f5-85f4-26f3e3ffaf05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\scene">
+      <UniqueIdentifier>{de8edd34-592f-46fe-8697-f3ae8db0450f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\debug">
+      <UniqueIdentifier>{6d26781d-c8af-4933-96a6-7e2578599b1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\core\entity">
+      <UniqueIdentifier>{5be6f32f-21a2-43fd-9706-d2ccb0adf4e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\core\entity\entitymanagerChild">
+      <UniqueIdentifier>{c6885530-8e2b-4e31-b751-a0d8f2f3fe95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\core\entity\Component">
+      <UniqueIdentifier>{7fdbb3be-d182-4fb5-9c3f-b1816e3a0ff4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\core\camera">
+      <UniqueIdentifier>{1a666f0d-4f51-4015-89ec-c97c0aff585f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\core\renderer">
+      <UniqueIdentifier>{a4aa68cd-bcdf-41ae-93e6-0001554fcf5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\core\renderer\image">
+      <UniqueIdentifier>{2d4e07b8-4365-4730-9dfd-c1a5c4cea2ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>core\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_demo.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_draw.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_impl_sdl.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_impl_sdlrenderer.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_stdlib.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_tables.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_widgets.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="window.cpp">
+      <Filter>core\engine\window</Filter>
+    </ClCompile>
+    <ClCompile Include="renderer.cpp">
+      <Filter>core\engine\core\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>core\engine\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="engine.cpp">
+      <Filter>core\engine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>core\engine\core\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="childManager.cpp">
+      <Filter>core\engine\core\entity\entitymanagerChild</Filter>
+    </ClCompile>
+    <ClCompile Include="component.cpp">
+      <Filter>core\engine\core\entity\Component</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vendor\imgui\imconfig.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_impl_sdl.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_impl_sdlrenderer.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_internal.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_stdlib.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imstb_rectpack.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imstb_textedit.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imstb_truetype.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="window.h">
+      <Filter>core\engine\window</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer.h">
+      <Filter>core\engine\core\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="vec2.h">
+      <Filter>core\engine\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="engine.h">
+      <Filter>core\engine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>core\engine\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="errorHandler.h">
+      <Filter>core\engine\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>core\engine\core\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="component.h">
+      <Filter>core\engine\core\entity\Component</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="notes.txt" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+components should just be containers for information.
+They should have a renderer.
+
+Entity manager will loop through components. Each component
+will have an assigned tag e.g " std::string tag = "transform"; "
+The system then will loop through all components in the list and then it appropriates the behaviour on the entity assigned.
+
+Depending on what the key for the component list is the system can expect the data recieved from it.
