@@ -1,0 +1,42 @@
+
+CREATE A LINE OF CODE COUNTER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Game Idea:
+2d Dungeon crawler:
+Hack and slash terraria style weapon movement.
+2D Platformer with unique itemization
+
+Core:
+Levels - whether hard coded or not
+Saving system
+Chest looting system
+Particle system
+Randomization when it comes to looting
+Basic physics e.g. rigidbodies -> forces
+A freeCam style camera when required perhaps
+Fog of war.
+Animation handling
+Ui controlling
+
+Priorities:
+* Sprite rendering
+* Camera system
+* Player controller
+* Input controller
+* GameState system
+* Finish Entity Management
+
+Middle Priorities:
+* Randomization system based on system time
+* rigidbodies
+* Collision detection for UI and Entities
+* Basic components required
+
+Backburner:
+* Particle system
+* Animation controller
+* Saving system
+* Ui controller
+* Chest Looting system
+* Dialogue system
+* Memory usage UI

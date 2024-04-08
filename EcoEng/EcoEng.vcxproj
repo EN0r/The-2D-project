@@ -104,13 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2_image-2.6.3\include;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2_mixer-2.6.3\include;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\imgui;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2-2.28.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2_ttf-2.20.2\include;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\imgui\backends;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\imgui;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2_image-2.6.3\include;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2_mixer-2.6.3\include;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2-2.28.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2-2.28.3\lib\x64;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2_ttf-2.20.2\lib\x64;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2_mixer-2.6.3\lib\x64;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2_image-2.6.3\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2_ttf-2.20.2\lib\x64;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2-2.28.3\lib\x64;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2_mixer-2.6.3\lib\x64;C:\Users\eriah\source\repos\EcoEng\EcoEng\vendor\SDL2_image-2.6.3\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,13 +130,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="camera.cpp" />
     <ClCompile Include="childManager.cpp" />
     <ClCompile Include="component.cpp" />
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="entity.cpp" />
+    <ClCompile Include="interface.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="renderer.cpp" />
     <ClCompile Include="scene.cpp" />
+    <ClCompile Include="time.cpp" />
     <ClCompile Include="vendor\imgui\imgui.cpp" />
     <ClCompile Include="vendor\imgui\imgui_demo.cpp" />
     <ClCompile Include="vendor\imgui\imgui_draw.cpp" />
@@ -148,12 +151,15 @@
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
     <ClInclude Include="component.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="errorHandler.h" />
+    <ClInclude Include="interface.h" />
     <ClInclude Include="renderer.h" />
     <ClInclude Include="scene.h" />
+    <ClInclude Include="time.h" />
     <ClInclude Include="vec2.h" />
     <ClInclude Include="vendor\imgui\imconfig.h" />
     <ClInclude Include="vendor\imgui\imgui.h" />

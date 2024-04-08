@@ -25,8 +25,36 @@ bool entityManager::deleteEntity(int entityID)
 }
 
 
-/*
 
+void entity::update(SDL_Renderer& renderer)
+{
+    //std::cout << "Total Entity Count:" << entityCount << std::endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ ----------------------------------------- IGNORE ----------------------------------------------
 void entityManager::requestEntityUpdate(std::string childTag, std::vector<std::string> componentList)
 {
     switch (comp)

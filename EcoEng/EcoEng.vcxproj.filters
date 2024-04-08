@@ -49,6 +49,12 @@
     <Filter Include="core\engine\core\renderer\image">
       <UniqueIdentifier>{2d4e07b8-4365-4730-9dfd-c1a5c4cea2ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core\engine\time">
+      <UniqueIdentifier>{6bc0cdaf-6e90-4b36-a5dd-ec4166882699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\engine\core\UI">
+      <UniqueIdentifier>{fe69d20a-8e0e-4f14-8a24-5b72ebc16afd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -98,6 +104,13 @@
     </ClCompile>
     <ClCompile Include="component.cpp">
       <Filter>core\engine\core\entity\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="time.cpp">
+      <Filter>core\engine\time</Filter>
+    </ClCompile>
+    <ClCompile Include="interface.cpp">
+      <Filter>core\engine\core\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +164,13 @@
     </ClInclude>
     <ClInclude Include="component.h">
       <Filter>core\engine\core\entity\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="time.h">
+      <Filter>core\engine\time</Filter>
+    </ClInclude>
+    <ClInclude Include="interface.h">
+      <Filter>core\engine\core\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

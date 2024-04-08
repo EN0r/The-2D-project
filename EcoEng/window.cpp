@@ -1,5 +1,8 @@
 #include <iostream>
 #include "window.h"
+#include "vendor/imgui/imgui.h"
+#include "vendor/imgui/imgui_impl_sdl3.h"
+#include "vendor/imgui/imgui_impl_sdlrenderer3.h"
 
 
 bool window::createWindow(const char* title, vec2 position, vec2 size, Uint32 flags)
@@ -18,6 +21,8 @@ int window::pollEvent()
     using namespace std;
     while (SDL_PollEvent(&event))
     {
+        mouseState = SDL_GetMouseState(&mouseX, &mouseY);
+        keyState = SDL_GetKeyboardState(NULL);
         switch (event.type)
         {
         case SDL_QUIT:

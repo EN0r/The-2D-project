@@ -1,5 +1,8 @@
 #include "engine.h"
 #include "entity.h"
+#include "vendor/imgui/imgui.h"
+#include "vendor/imgui/imgui_impl_sdl3.h"
+#include "vendor/imgui/imgui_impl_sdlrenderer3.h"
 engine* engine::instance = nullptr;
 engine* engine::getInstance()
 {
@@ -19,34 +22,9 @@ void engine::entry()
     _window.reset(new window);
     _renderer.reset(new renderer);
 
-    std::shared_ptr<entityManager> e = std::make_shared<entityManager>();
-    int entity1Id = e->createEntity<entity>();
-    e->addComponent<transform>(entity1Id);
-    e->addComponent<rigidBody>(entity1Id);
-    e->getComponent<rigidBody>(entity1Id)->force = 100;
-    std::cout << "Done" << std::endl;
+
     // Usage -> e->addComponent<COMPONENT>(entity1Id) returns a integer for the identifier for the created entity.
-
-    std::cout << e->getComponent<rigidBody>(entity1Id)->force << std::endl;
-    std::cout << e->retCompIdentifier<transform>() << std::endl;
-
-
-
     // renderer will focus on image loading ect.
     _window->createWindow("eCore", vec2(100, 100), vec2(800, 600), SDL_WINDOW_SHOWN);
     _renderer->entry(_window);
-
-
-    /*
-    sandBox
-    
-    
-    VVVVVVVVVVVVVVV
-    */
-
-
-
-
-
-
 }

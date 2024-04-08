@@ -19,18 +19,38 @@ class entityManager
 {
 public:
 	//requestUpdate
-	void requestEntityUpdate(std::string childTag,std::vector<std::string> componentList); // need to eventually elaborate on this.... Also, Require documentation.
 	// Because each one of them has an ID whenever you request to add a component it can know which is which without any complications.
+	template<typename enT>
+	void requestEntityUpdate(SDL_Renderer& renderer) // need to eventually elaborate on this.... Also, Require documentation.
+	{
+		if (std::is_base_of<entityManager, enT>())
+		{
+			std::vector<int> entities;
+			for (auto entID : entityList)
+			{
+				//std::cout << entID.first << ": Is the entity ID of component" << std::endl;
+				std::static_pointer_cast<enT>(entID.second)->setEID(entID.first); // Kinda painful but its somewhat of a workaround... Idk why this is happening in the first place.
+				std::static_pointer_cast<enT>(entID.second)->update(renderer);
+			}
+		}
+	}
 
 	// Returns 0 if an entity with the same tag exists.
 	// Creates an empty entity with a tag and emplaces it into entity list returns ID of entity.
+	// if returns -1 then template argument is not a form of entity!
 	template<typename enT>
-	int createEntity()
+	int createEntity() 
 	{
-		entityCount++;
-		std::shared_ptr<void*> entBuf = std::make_shared<void*>(static_cast<void*>(new enT));
-		entityList.emplace(entityCount, entBuf);
-		return entityCount;
+		if (std::is_base_of<entityManager, enT>())
+		{
+			entityCount++;
+			enT* x = new enT(entityCount);
+			//std::cout << x->thisEntityID <<"ID" << std::endl;
+			std::shared_ptr<void*> entBuf = std::make_shared<void*>(static_cast<void*>(x));
+			entityList.emplace(entityCount, entBuf);
+			return entityCount;
+		}
+		return -1;
 	}
 
 	// need to implement system later on to make sure that when entity has been updated to make sure it exists.
@@ -57,6 +77,7 @@ public:
 		return -1;
 	}
 
+	// returns the identifier of the component in a INT value.
 	template <typename T>
 	int retCompIdentifier()
 	{
@@ -64,6 +85,7 @@ public:
 		return componentID->getComponentIdentifier();
 	}
 
+	// GetComponent returns the component it has aquired from the entity.
 	template <typename component>
 	std::shared_ptr<component> getComponent(int entityID) // if return nullptr then component not found
 	{
@@ -97,11 +119,11 @@ public:
 			throw_line("Component requested does exist. Please create a for the entity.");
 	}
 
-	// n/a rn :P
-	void update(std::shared_ptr<renderer> renderer);
-	void start(std::shared_ptr<renderer> renderer);
+	// n
+	void update(SDL_Renderer& renderer) {};
+	void start(SDL_Renderer& renderer) {};
 private:
-
+	// buffer so i can cast type into this. Needed
 protected:
 	int entityCount = 0;
 	int componentRelationalCounter = 0;
@@ -113,17 +135,18 @@ protected:
 	std::unordered_multimap<int, int> entityComponentRelationship;
 	// Components in management.
 	std::vector<std::shared_ptr<void>> managedComponents;
-
 };
 
 
-class entity : entityManager
+class entity : public entityManager
 {
 public:
-	void update(std::shared_ptr<renderer> renderer);
+	void update(SDL_Renderer& renderer);
 	void start(std::shared_ptr<renderer> renderer);
+	entity(int id) { thisEntityID = id; }
+	void setEID(int id) { this->thisEntityID = id; }
 private:
-	unsigned int thisEntityID = -1;
+	int thisEntityID = -1;
 
 	/*
 	Data should be formatted as
